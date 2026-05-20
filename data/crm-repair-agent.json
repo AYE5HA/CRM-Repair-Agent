@@ -1,0 +1,1852 @@
+{
+  "workspace": {
+    "id": "ws_demo",
+    "name": "Demo Revenue Workspace"
+  },
+  "user": {
+    "id": "usr_ayesha",
+    "name": "Ayesha",
+    "email": "ayesha@example.com",
+    "role": "Founder"
+  },
+  "accounts": [
+    {
+      "id": "acct_heliostack",
+      "name": "HelioStack",
+      "domain": "heliostack.io",
+      "health": "watch",
+      "confidence": 78,
+      "stakeholders": [
+        {
+          "id": "ct_maya",
+          "accountId": "acct_heliostack",
+          "name": "Maya Chen",
+          "title": "Chief Revenue Officer",
+          "email": "maya@heliostack.io",
+          "confidence": 93
+        },
+        {
+          "id": "ct_priya",
+          "accountId": "acct_heliostack",
+          "name": "Priya Nair",
+          "title": "RevOps Lead",
+          "confidence": 72
+        },
+        {
+          "id": "ct_daniel",
+          "accountId": "acct_heliostack",
+          "name": "Daniel Cho",
+          "title": "Security Reviewer",
+          "confidence": 69
+        }
+      ],
+      "deals": [
+        {
+          "id": "deal_helio_pilot",
+          "accountId": "acct_heliostack",
+          "name": "CRM Repair Pilot",
+          "stage": "Proposal requested",
+          "value": "$42k",
+          "urgency": "Pilot proposal due May 22",
+          "risks": [
+            "Security packet not sent",
+            "Timeline slips to Q3 if May 22 commitment is missed"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "id": "int_call_1",
+          "accountId": "acct_heliostack",
+          "type": "call",
+          "title": "Discovery call shifted into pilot request",
+          "occurredAt": "2026-05-18T14:03:47.195Z",
+          "summary": "Maya clarified title, urgency, budget gate, stakeholders, and a hard follow-up commitment.",
+          "evidenceIds": [
+            "ev_call_1",
+            "ev_call_2",
+            "ev_slack_1"
+          ]
+        }
+      ],
+      "risks": [
+        "Old CRM stage understates deal readiness",
+        "Security reviewer is not attached to account"
+      ],
+      "nextActions": [
+        "Send pilot plan and security packet",
+        "Ask Priya for implementation owner",
+        "Set no-response reminder"
+      ],
+      "memoryGraph": [
+        {
+          "from": "Maya Chen",
+          "to": "HelioStack",
+          "label": "CRO at"
+        },
+        {
+          "from": "Priya Nair",
+          "to": "CRM Repair Pilot",
+          "label": "owns RevOps evaluation"
+        },
+        {
+          "from": "Daniel Cho",
+          "to": "Security packet",
+          "label": "reviews"
+        },
+        {
+          "from": "Series B",
+          "to": "Priority",
+          "label": "raises urgency"
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "rec_jfuhceerui25",
+      "accountId": "acct_heliostack",
+      "title": "NimbusOps",
+      "status": "needs_repair",
+      "inputText": "Account NimbusOps. CRM says contact Jordan Lee, Director IT, stage Discovery.\r\nCall note: Jordan is now VP Operations. They are evaluating CRM Repair Agent for renewal handoff leakage.\r\nConcern: security review cannot slip. Please send SOC2 packet and pilot checklist by May 28.\r\nBudget is approved if onboarding takes less than 21 days. Priya Shah from finance must be included.",
+      "inputType": "transcript",
+      "createdAt": "2026-05-20T15:55:54.993Z",
+      "updatedAt": "2026-05-20T15:55:54.993Z",
+      "evidence": [
+        {
+          "id": "ev_f2zz31xeui23",
+          "sourceName": "User pasted input",
+          "sourceType": "transcript",
+          "snippet": "Account NimbusOps. CRM says contact Jordan Lee, Director IT, stage Discovery.\r\nCall note: Jordan is now VP Operations. They are evaluating CRM Repair Agent for renewal handoff leakage.\r\nConcern: security review cannot slip. Please send SOC2 packet and pilot ch",
+          "observedAt": "2026-05-20T15:55:54.987Z",
+          "freshnessDays": 0
+        },
+        {
+          "id": "ev_anau72zzui24",
+          "sourceName": "Current CRM baseline",
+          "sourceType": "crm",
+          "snippet": "Existing CRM fields were treated as lower-freshness baseline evidence when contradicted by pasted input.",
+          "observedAt": "2026-04-05T15:55:54.988Z",
+          "freshnessDays": 45
+        }
+      ],
+      "extracted": [
+        {
+          "field": "contact.name",
+          "value": "Jordan Lee",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "contact.title",
+          "value": "VP Operations",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "company.name",
+          "value": "NimbusOps",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "deal.stage",
+          "value": "Proposal requested",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "pain_points",
+          "value": "Fragmented customer context",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "objections",
+          "value": "Concern: security review cannot slip",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "next_step",
+          "value": "send SOC2 packet and pilot checklist by May 28",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "stakeholders",
+          "value": "Jordan Lee, Repair Agent, Priya Shah",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "product_interest",
+          "value": "CRM Repair Agent for renewal handoff leakage",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "budget",
+          "value": "Budget is approved if onboarding takes less than 21 days",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "urgency",
+          "value": "by May 28",
+          "evidenceId": "ev_f2zz31xeui23",
+          "confidence": 100,
+          "freshnessDays": 0
+        }
+      ],
+      "proposals": [
+        {
+          "id": "prop_ah8vijm3ui25",
+          "field": "contact.name",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Jordan Lee",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "contact.name is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ],
+          "batchId": "batch_iv5uqxg5ui27"
+        },
+        {
+          "id": "prop_2tne00zmui25",
+          "field": "contact.title",
+          "currentValue": "VP Marketing",
+          "proposedValue": "VP Operations",
+          "confidence": 92,
+          "action": "update",
+          "rationale": "contact.title is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23",
+            "ev_anau72zzui24"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "Conflicts with CRM baseline"
+          ],
+          "batchId": "batch_iv5uqxg5ui27"
+        },
+        {
+          "id": "prop_61330ekdui25",
+          "field": "company.name",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "NimbusOps",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "company.name is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ],
+          "batchId": "batch_6x2p8ociui27"
+        },
+        {
+          "id": "prop_pj4smr5yui25",
+          "field": "deal.stage",
+          "currentValue": "Discovery",
+          "proposedValue": "Proposal requested",
+          "confidence": 92,
+          "action": "update",
+          "rationale": "deal.stage is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23",
+            "ev_anau72zzui24"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "Conflicts with CRM baseline"
+          ],
+          "batchId": "batch_h14sq40lui27"
+        },
+        {
+          "id": "prop_z9pngcqpui25",
+          "field": "pain_points",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Fragmented customer context",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "pain_points is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ],
+          "batchId": "batch_6x2p8ociui27"
+        },
+        {
+          "id": "prop_52cu8moiui25",
+          "field": "objections",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Concern: security review cannot slip",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "objections is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_2wz97jfoui25",
+          "field": "next_step",
+          "currentValue": "Send generic deck",
+          "proposedValue": "send SOC2 packet and pilot checklist by May 28",
+          "confidence": 92,
+          "action": "update",
+          "rationale": "next_step is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23",
+            "ev_anau72zzui24"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "Conflicts with CRM baseline"
+          ],
+          "batchId": "batch_h14sq40lui27"
+        },
+        {
+          "id": "prop_o6itl7p0ui25",
+          "field": "stakeholders",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Jordan Lee, Repair Agent, Priya Shah",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "stakeholders is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_x5h505itui25",
+          "field": "product_interest",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "CRM Repair Agent for renewal handoff leakage",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "product_interest is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_4bz9vgpkui25",
+          "field": "budget",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Budget is approved if onboarding takes less than 21 days",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "budget is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_q7d87imvui25",
+          "field": "urgency",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "by May 28",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "urgency is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_f2zz31xeui23"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:55:54.989Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "id": "con_20f26tiqui25",
+          "field": "contact.title",
+          "severity": "high",
+          "summary": "contact.title has a fresher value than the CRM baseline.",
+          "values": [
+            {
+              "value": "VP Marketing",
+              "evidenceId": "ev_anau72zzui24",
+              "sourceName": "Current CRM baseline"
+            },
+            {
+              "value": "VP Operations",
+              "evidenceId": "ev_f2zz31xeui23",
+              "sourceName": "User pasted input"
+            }
+          ],
+          "recommendedResolution": "Use \"VP Operations\" unless the user rejects this repair."
+        },
+        {
+          "id": "con_3ku5gleuui25",
+          "field": "deal.stage",
+          "severity": "high",
+          "summary": "deal.stage has a fresher value than the CRM baseline.",
+          "values": [
+            {
+              "value": "Discovery",
+              "evidenceId": "ev_anau72zzui24",
+              "sourceName": "Current CRM baseline"
+            },
+            {
+              "value": "Proposal requested",
+              "evidenceId": "ev_f2zz31xeui23",
+              "sourceName": "User pasted input"
+            }
+          ],
+          "recommendedResolution": "Use \"Proposal requested\" unless the user rejects this repair."
+        },
+        {
+          "id": "con_ceu50lorui25",
+          "field": "next_step",
+          "severity": "high",
+          "summary": "next_step has a fresher value than the CRM baseline.",
+          "values": [
+            {
+              "value": "Send generic deck",
+              "evidenceId": "ev_anau72zzui24",
+              "sourceName": "Current CRM baseline"
+            },
+            {
+              "value": "send SOC2 packet and pilot checklist by May 28",
+              "evidenceId": "ev_f2zz31xeui23",
+              "sourceName": "User pasted input"
+            }
+          ],
+          "recommendedResolution": "Use \"send SOC2 packet and pilot checklist by May 28\" unless the user rejects this repair."
+        }
+      ],
+      "minimumQuestions": [
+        {
+          "question": "Which stakeholder has final authority for the next committed step?",
+          "impact": "Resolves ownership and prevents follow-up from going to the wrong person.",
+          "resolves": [
+            "stakeholder_authority",
+            "next_step_owner"
+          ]
+        },
+        {
+          "question": "Is by May 28 a hard deadline or a preference?",
+          "impact": "Turns ambiguous urgency into a reliable task deadline.",
+          "resolves": [
+            "deadline_confidence"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task_w86vbrxsui26",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_jfuhceerui25",
+          "title": "send SOC2 packet and pilot checklist by May 28",
+          "priority": "high",
+          "dueAt": "2026-05-22T15:55:54.990Z",
+          "status": "open",
+          "reason": "Urgency signal: by May 28",
+          "kind": "follow_up"
+        },
+        {
+          "id": "task_lm45zik0ui26",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_jfuhceerui25",
+          "title": "Route security packet to reviewer",
+          "priority": "high",
+          "dueAt": "2026-05-21T15:55:54.990Z",
+          "status": "open",
+          "reason": "Security review is on the critical path.",
+          "kind": "email"
+        },
+        {
+          "id": "task_yp5q8m4bui26",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_jfuhceerui25",
+          "title": "Internal handoff: RevOps + finance alignment",
+          "priority": "medium",
+          "dueAt": "2026-05-23T15:55:54.990Z",
+          "status": "open",
+          "reason": "Cross-functional stakeholders mentioned in source evidence.",
+          "kind": "handoff"
+        },
+        {
+          "id": "task_jkysuj9xui26",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_jfuhceerui25",
+          "title": "Deal rescue: confirm deadline before pipeline pause",
+          "priority": "high",
+          "dueAt": "2026-05-21T15:55:54.990Z",
+          "status": "open",
+          "reason": "Buyer stated deal pauses if commitment is missed.",
+          "kind": "deal_rescue"
+        }
+      ],
+      "draftEmail": {
+        "id": "email_w4utd0y4ui28",
+        "accountId": "acct_heliostack",
+        "recordId": "rec_jfuhceerui25",
+        "subject": "Next steps for NimbusOps",
+        "body": "Hi Jordan,\n\nThanks for the context. I captured the key next step as: send SOC2 packet and pilot checklist by May 28.\n\nQuick confirm: Which stakeholder has final authority for the next committed step?\n\nBest,\nAyesha",
+        "rationale": "Draft is grounded in the repaired next step and asks only the highest-impact clarification."
+      },
+      "generatedAssets": [
+        {
+          "id": "asset_iir1v8xsui28",
+          "type": "email",
+          "title": "Next steps for NimbusOps",
+          "body": "Hi Jordan,\n\nThanks for the context. I captured the key next step as: send SOC2 packet and pilot checklist by May 28.\n\nQuick confirm: Which stakeholder has final authority for the next committed step?\n\nBest,\nAyesha",
+          "rationale": "Draft is grounded in the repaired next step and asks only the highest-impact clarification."
+        },
+        {
+          "id": "asset_lphcwuu2ui28",
+          "type": "slack",
+          "title": "Internal handoff note",
+          "body": "*NimbusOps repair summary*\n• Pain: Fragmented customer context\n• Next step: send SOC2 packet and pilot checklist by May 28\n• Urgency: by May 28\n• Needs: security path + implementation owner before sync.",
+          "rationale": "Gives CS/AE teams the repaired truth without opening the full repair workspace."
+        },
+        {
+          "id": "asset_hmyz18jiui29",
+          "type": "deal_notes",
+          "title": "Updated deal notes",
+          "body": "NimbusOps: Buyer pain is Fragmented customer context. Repaired next step: send SOC2 packet and pilot checklist by May 28. Open concern: Concern: security review cannot slip.",
+          "rationale": "CRM-ready narrative grounded in evidence-backed repairs."
+        },
+        {
+          "id": "asset_z107gz1sui29",
+          "type": "objection",
+          "title": "Objection handling snippet",
+          "body": "If \"Concern: security review cannot slip\" resurfaces: acknowledge the constraint, cite the sub-30-day implementation path, and offer a security-first pilot scope.",
+          "rationale": "Prepared only when an objection signal exists in the source text."
+        },
+        {
+          "id": "asset_g55sw4qrui29",
+          "type": "reminder",
+          "title": "No-response reminder",
+          "body": "If no reply from Jordan within 48h of sending assets, ping with: \"Happy to adjust the pilot plan — still aiming for by May 28?\"",
+          "rationale": "Protects the commitment window without generic nurture language."
+        }
+      ],
+      "commitments": [
+        {
+          "id": "cmt_6gf13v6wui28",
+          "text": "Send SOC2 packet and pilot checklist",
+          "dueHint": "May 28",
+          "sourceEvidenceId": "ev_f2zz31xeui23",
+          "status": "at_risk"
+        }
+      ],
+      "selfHealing": [
+        {
+          "id": "heal_2sixog2cui27",
+          "trigger": "Contact role changed",
+          "suggestion": "Update outreach templates and stakeholder map to reflect VP Operations.",
+          "affectedFields": [
+            "contact.title",
+            "stakeholders",
+            "email.tone"
+          ]
+        },
+        {
+          "id": "heal_ry4kyc62ui27",
+          "trigger": "Deal stage advanced",
+          "suggestion": "Regenerate proposal tasks and forecast category; close generic discovery follow-ups.",
+          "affectedFields": [
+            "deal.stage",
+            "tasks",
+            "forecast"
+          ]
+        },
+        {
+          "id": "heal_1fr3mfgmui27",
+          "trigger": "Next step became specific",
+          "suggestion": "Replace generic deck task with dated deliverables and attach security reviewer if mentioned.",
+          "affectedFields": [
+            "next_step",
+            "tasks",
+            "reminders"
+          ]
+        }
+      ],
+      "repairBatches": [
+        {
+          "id": "batch_iv5uqxg5ui27",
+          "label": "Contact identity batch",
+          "proposalIds": [
+            "prop_ah8vijm3ui25",
+            "prop_2tne00zmui25"
+          ],
+          "summary": "Update title, email, and outreach context together to avoid partial contact repairs."
+        },
+        {
+          "id": "batch_h14sq40lui27",
+          "label": "Deal momentum batch",
+          "proposalIds": [
+            "prop_pj4smr5yui25",
+            "prop_2wz97jfoui25"
+          ],
+          "summary": "Stage and next-step should move together so forecast and tasks stay aligned."
+        },
+        {
+          "id": "batch_6x2p8ociui27",
+          "label": "Account context batch",
+          "proposalIds": [
+            "prop_61330ekdui25",
+            "prop_z9pngcqpui25"
+          ],
+          "summary": "Refresh company facts and pain points before prioritization changes."
+        }
+      ],
+      "staleFlags": [
+        {
+          "id": "stale_jv1mcstyui27",
+          "field": "crm.baseline",
+          "reason": "Source is 45 days old and may be superseded by fresher inputs.",
+          "ageDays": 45
+        }
+      ],
+      "syncPreview": [
+        {
+          "field": "contact.name",
+          "before": "Unknown / stale",
+          "after": "Jordan Lee",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "contact.title",
+          "before": "VP Marketing",
+          "after": "VP Operations",
+          "impact": "Updates outreach context and stakeholder map",
+          "uncertain": false
+        },
+        {
+          "field": "company.name",
+          "before": "Unknown / stale",
+          "after": "NimbusOps",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "deal.stage",
+          "before": "Discovery",
+          "after": "Proposal requested",
+          "impact": "Updates forecast and task priority",
+          "uncertain": false
+        },
+        {
+          "field": "pain_points",
+          "before": "Unknown / stale",
+          "after": "Fragmented customer context",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "objections",
+          "before": "Unknown / stale",
+          "after": "Concern: security review cannot slip",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "next_step",
+          "before": "Send generic deck",
+          "after": "send SOC2 packet and pilot checklist by May 28",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "stakeholders",
+          "before": "Unknown / stale",
+          "after": "Jordan Lee, Repair Agent, Priya Shah",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "product_interest",
+          "before": "Unknown / stale",
+          "after": "CRM Repair Agent for renewal handoff leakage",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "budget",
+          "before": "Unknown / stale",
+          "after": "Budget is approved if onboarding takes less than 21 days",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "urgency",
+          "before": "Unknown / stale",
+          "after": "by May 28",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        }
+      ]
+    },
+    {
+      "id": "rec_ovhqpq3pycq2",
+      "accountId": "acct_heliostack",
+      "title": "NimbusOps",
+      "status": "needs_repair",
+      "inputText": "Account NimbusOps. CRM says contact Jordan Lee, Director IT, stage Discovery.\r\nCall note: Jordan is now VP Operations. They are evaluating CRM Repair Agent for renewal handoff leakage.\r\nConcern: security review cannot slip. Please send SOC2 packet and pilot checklist by May 28.\r\nBudget is approved if onboarding takes less than 21 days. Priya Shah from finance must be included.",
+      "inputType": "transcript",
+      "createdAt": "2026-05-20T15:02:55.469Z",
+      "updatedAt": "2026-05-20T15:02:55.469Z",
+      "evidence": [
+        {
+          "id": "ev_03zabibhycpz",
+          "sourceName": "User pasted input",
+          "sourceType": "transcript",
+          "snippet": "Account NimbusOps. CRM says contact Jordan Lee, Director IT, stage Discovery.\r\nCall note: Jordan is now VP Operations. They are evaluating CRM Repair Agent for renewal handoff leakage.\r\nConcern: security review cannot slip. Please send SOC2 packet and pilot ch",
+          "observedAt": "2026-05-20T15:02:55.463Z",
+          "freshnessDays": 0
+        },
+        {
+          "id": "ev_eh35nh3nycpz",
+          "sourceName": "Current CRM baseline",
+          "sourceType": "crm",
+          "snippet": "Existing CRM fields were treated as lower-freshness baseline evidence when contradicted by pasted input.",
+          "observedAt": "2026-04-05T15:02:55.463Z",
+          "freshnessDays": 45
+        }
+      ],
+      "extracted": [
+        {
+          "field": "contact.name",
+          "value": "Jordan Lee",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "contact.title",
+          "value": "VP Operations",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "company.name",
+          "value": "NimbusOps",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "deal.stage",
+          "value": "Proposal requested",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "pain_points",
+          "value": "Fragmented customer context",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "objections",
+          "value": "Concern: security review cannot slip",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "next_step",
+          "value": "send SOC2 packet and pilot checklist by May 28",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "stakeholders",
+          "value": "Jordan Lee, Repair Agent, Priya Shah",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "product_interest",
+          "value": "CRM Repair Agent for renewal handoff leakage",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "budget",
+          "value": "Budget is approved if onboarding takes less than 21 days",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        },
+        {
+          "field": "urgency",
+          "value": "by May 28",
+          "evidenceId": "ev_03zabibhycpz",
+          "confidence": 100,
+          "freshnessDays": 0
+        }
+      ],
+      "proposals": [
+        {
+          "id": "prop_fzncnrvtycq1",
+          "field": "contact.name",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Jordan Lee",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "contact.name is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ],
+          "batchId": "batch_6nyy4krqycq3"
+        },
+        {
+          "id": "prop_x6m0lf5nycq1",
+          "field": "contact.title",
+          "currentValue": "VP Marketing",
+          "proposedValue": "VP Operations",
+          "confidence": 92,
+          "action": "update",
+          "rationale": "contact.title is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz",
+            "ev_eh35nh3nycpz"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "Conflicts with CRM baseline"
+          ],
+          "batchId": "batch_6nyy4krqycq3"
+        },
+        {
+          "id": "prop_fjzabvycycq1",
+          "field": "company.name",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "NimbusOps",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "company.name is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ],
+          "batchId": "batch_d9a2nhl9ycq3"
+        },
+        {
+          "id": "prop_s2k7tha3ycq1",
+          "field": "deal.stage",
+          "currentValue": "Discovery",
+          "proposedValue": "Proposal requested",
+          "confidence": 92,
+          "action": "update",
+          "rationale": "deal.stage is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz",
+            "ev_eh35nh3nycpz"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "Conflicts with CRM baseline"
+          ],
+          "batchId": "batch_k6vh1g12ycq3"
+        },
+        {
+          "id": "prop_uxulmydoycq1",
+          "field": "pain_points",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Fragmented customer context",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "pain_points is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ],
+          "batchId": "batch_d9a2nhl9ycq3"
+        },
+        {
+          "id": "prop_5yv0pi28ycq1",
+          "field": "objections",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Concern: security review cannot slip",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "objections is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_re66r8l9ycq1",
+          "field": "next_step",
+          "currentValue": "Send generic deck",
+          "proposedValue": "send SOC2 packet and pilot checklist by May 28",
+          "confidence": 92,
+          "action": "update",
+          "rationale": "next_step is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz",
+            "ev_eh35nh3nycpz"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "Conflicts with CRM baseline"
+          ],
+          "batchId": "batch_k6vh1g12ycq3"
+        },
+        {
+          "id": "prop_2gbjhuodycq1",
+          "field": "stakeholders",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Jordan Lee, Repair Agent, Priya Shah",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "stakeholders is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_3bumjixvycq1",
+          "field": "product_interest",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "CRM Repair Agent for renewal handoff leakage",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "product_interest is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_3hkgrqlwycq1",
+          "field": "budget",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "Budget is approved if onboarding takes less than 21 days",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "budget is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        },
+        {
+          "id": "prop_x4dbp7cpycq1",
+          "field": "urgency",
+          "currentValue": "Unknown / stale",
+          "proposedValue": "by May 28",
+          "confidence": 100,
+          "action": "update",
+          "rationale": "urgency is supported by fresh pasted evidence. Confidence reflects direct mention, source freshness, and whether the CRM baseline conflicts.",
+          "evidenceIds": [
+            "ev_03zabibhycpz"
+          ],
+          "contradictionStatus": "clear",
+          "lastVerifiedAt": "2026-05-20T15:02:55.465Z",
+          "repairHistory": [
+            "Generated from ingestion pipeline",
+            "No direct conflict found"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "id": "con_k1sbydinycq1",
+          "field": "contact.title",
+          "severity": "high",
+          "summary": "contact.title has a fresher value than the CRM baseline.",
+          "values": [
+            {
+              "value": "VP Marketing",
+              "evidenceId": "ev_eh35nh3nycpz",
+              "sourceName": "Current CRM baseline"
+            },
+            {
+              "value": "VP Operations",
+              "evidenceId": "ev_03zabibhycpz",
+              "sourceName": "User pasted input"
+            }
+          ],
+          "recommendedResolution": "Use \"VP Operations\" unless the user rejects this repair."
+        },
+        {
+          "id": "con_hgoml2anycq2",
+          "field": "deal.stage",
+          "severity": "high",
+          "summary": "deal.stage has a fresher value than the CRM baseline.",
+          "values": [
+            {
+              "value": "Discovery",
+              "evidenceId": "ev_eh35nh3nycpz",
+              "sourceName": "Current CRM baseline"
+            },
+            {
+              "value": "Proposal requested",
+              "evidenceId": "ev_03zabibhycpz",
+              "sourceName": "User pasted input"
+            }
+          ],
+          "recommendedResolution": "Use \"Proposal requested\" unless the user rejects this repair."
+        },
+        {
+          "id": "con_fsg00hrpycq2",
+          "field": "next_step",
+          "severity": "high",
+          "summary": "next_step has a fresher value than the CRM baseline.",
+          "values": [
+            {
+              "value": "Send generic deck",
+              "evidenceId": "ev_eh35nh3nycpz",
+              "sourceName": "Current CRM baseline"
+            },
+            {
+              "value": "send SOC2 packet and pilot checklist by May 28",
+              "evidenceId": "ev_03zabibhycpz",
+              "sourceName": "User pasted input"
+            }
+          ],
+          "recommendedResolution": "Use \"send SOC2 packet and pilot checklist by May 28\" unless the user rejects this repair."
+        }
+      ],
+      "minimumQuestions": [
+        {
+          "question": "Which stakeholder has final authority for the next committed step?",
+          "impact": "Resolves ownership and prevents follow-up from going to the wrong person.",
+          "resolves": [
+            "stakeholder_authority",
+            "next_step_owner"
+          ]
+        },
+        {
+          "question": "Is by May 28 a hard deadline or a preference?",
+          "impact": "Turns ambiguous urgency into a reliable task deadline.",
+          "resolves": [
+            "deadline_confidence"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task_43liiqv2ycq2",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_ovhqpq3pycq2",
+          "title": "send SOC2 packet and pilot checklist by May 28",
+          "priority": "high",
+          "dueAt": "2026-05-22T15:02:55.466Z",
+          "status": "open",
+          "reason": "Urgency signal: by May 28",
+          "kind": "follow_up"
+        },
+        {
+          "id": "task_jp2kp2jtycq2",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_ovhqpq3pycq2",
+          "title": "Route security packet to reviewer",
+          "priority": "high",
+          "dueAt": "2026-05-21T15:02:55.466Z",
+          "status": "open",
+          "reason": "Security review is on the critical path.",
+          "kind": "email"
+        },
+        {
+          "id": "task_yhswnnp9ycq2",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_ovhqpq3pycq2",
+          "title": "Internal handoff: RevOps + finance alignment",
+          "priority": "medium",
+          "dueAt": "2026-05-23T15:02:55.466Z",
+          "status": "open",
+          "reason": "Cross-functional stakeholders mentioned in source evidence.",
+          "kind": "handoff"
+        },
+        {
+          "id": "task_3zmmfacpycq2",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_ovhqpq3pycq2",
+          "title": "Deal rescue: confirm deadline before pipeline pause",
+          "priority": "high",
+          "dueAt": "2026-05-21T15:02:55.466Z",
+          "status": "open",
+          "reason": "Buyer stated deal pauses if commitment is missed.",
+          "kind": "deal_rescue"
+        }
+      ],
+      "draftEmail": {
+        "id": "email_1yrcrypkycq5",
+        "accountId": "acct_heliostack",
+        "recordId": "rec_ovhqpq3pycq2",
+        "subject": "Next steps for NimbusOps",
+        "body": "Hi Jordan,\n\nThanks for the context. I captured the key next step as: send SOC2 packet and pilot checklist by May 28.\n\nQuick confirm: Which stakeholder has final authority for the next committed step?\n\nBest,\nAyesha",
+        "rationale": "Draft is grounded in the repaired next step and asks only the highest-impact clarification."
+      },
+      "generatedAssets": [
+        {
+          "id": "asset_7y5rwcbzycq5",
+          "type": "email",
+          "title": "Next steps for NimbusOps",
+          "body": "Hi Jordan,\n\nThanks for the context. I captured the key next step as: send SOC2 packet and pilot checklist by May 28.\n\nQuick confirm: Which stakeholder has final authority for the next committed step?\n\nBest,\nAyesha",
+          "rationale": "Draft is grounded in the repaired next step and asks only the highest-impact clarification."
+        },
+        {
+          "id": "asset_o62jxizoycq5",
+          "type": "slack",
+          "title": "Internal handoff note",
+          "body": "*NimbusOps repair summary*\n• Pain: Fragmented customer context\n• Next step: send SOC2 packet and pilot checklist by May 28\n• Urgency: by May 28\n• Needs: security path + implementation owner before sync.",
+          "rationale": "Gives CS/AE teams the repaired truth without opening the full repair workspace."
+        },
+        {
+          "id": "asset_r44eovr1ycq5",
+          "type": "deal_notes",
+          "title": "Updated deal notes",
+          "body": "NimbusOps: Buyer pain is Fragmented customer context. Repaired next step: send SOC2 packet and pilot checklist by May 28. Open concern: Concern: security review cannot slip.",
+          "rationale": "CRM-ready narrative grounded in evidence-backed repairs."
+        },
+        {
+          "id": "asset_ycbwpco5ycq5",
+          "type": "objection",
+          "title": "Objection handling snippet",
+          "body": "If \"Concern: security review cannot slip\" resurfaces: acknowledge the constraint, cite the sub-30-day implementation path, and offer a security-first pilot scope.",
+          "rationale": "Prepared only when an objection signal exists in the source text."
+        },
+        {
+          "id": "asset_rv83fjtrycq5",
+          "type": "reminder",
+          "title": "No-response reminder",
+          "body": "If no reply from Jordan within 48h of sending assets, ping with: \"Happy to adjust the pilot plan — still aiming for by May 28?\"",
+          "rationale": "Protects the commitment window without generic nurture language."
+        }
+      ],
+      "commitments": [
+        {
+          "id": "cmt_81m9zjwiycq5",
+          "text": "Send SOC2 packet and pilot checklist",
+          "dueHint": "May 28",
+          "sourceEvidenceId": "ev_03zabibhycpz",
+          "status": "at_risk"
+        }
+      ],
+      "selfHealing": [
+        {
+          "id": "heal_ne62khawycq4",
+          "trigger": "Contact role changed",
+          "suggestion": "Update outreach templates and stakeholder map to reflect VP Operations.",
+          "affectedFields": [
+            "contact.title",
+            "stakeholders",
+            "email.tone"
+          ]
+        },
+        {
+          "id": "heal_ik65czl5ycq4",
+          "trigger": "Deal stage advanced",
+          "suggestion": "Regenerate proposal tasks and forecast category; close generic discovery follow-ups.",
+          "affectedFields": [
+            "deal.stage",
+            "tasks",
+            "forecast"
+          ]
+        },
+        {
+          "id": "heal_jw7q8r9rycq4",
+          "trigger": "Next step became specific",
+          "suggestion": "Replace generic deck task with dated deliverables and attach security reviewer if mentioned.",
+          "affectedFields": [
+            "next_step",
+            "tasks",
+            "reminders"
+          ]
+        }
+      ],
+      "repairBatches": [
+        {
+          "id": "batch_6nyy4krqycq3",
+          "label": "Contact identity batch",
+          "proposalIds": [
+            "prop_fzncnrvtycq1",
+            "prop_x6m0lf5nycq1"
+          ],
+          "summary": "Update title, email, and outreach context together to avoid partial contact repairs."
+        },
+        {
+          "id": "batch_k6vh1g12ycq3",
+          "label": "Deal momentum batch",
+          "proposalIds": [
+            "prop_s2k7tha3ycq1",
+            "prop_re66r8l9ycq1"
+          ],
+          "summary": "Stage and next-step should move together so forecast and tasks stay aligned."
+        },
+        {
+          "id": "batch_d9a2nhl9ycq3",
+          "label": "Account context batch",
+          "proposalIds": [
+            "prop_fjzabvycycq1",
+            "prop_uxulmydoycq1"
+          ],
+          "summary": "Refresh company facts and pain points before prioritization changes."
+        }
+      ],
+      "staleFlags": [
+        {
+          "id": "stale_9m4wo9o1ycq3",
+          "field": "crm.baseline",
+          "reason": "Source is 45 days old and may be superseded by fresher inputs.",
+          "ageDays": 45
+        }
+      ],
+      "syncPreview": [
+        {
+          "field": "contact.name",
+          "before": "Unknown / stale",
+          "after": "Jordan Lee",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "contact.title",
+          "before": "VP Marketing",
+          "after": "VP Operations",
+          "impact": "Updates outreach context and stakeholder map",
+          "uncertain": false
+        },
+        {
+          "field": "company.name",
+          "before": "Unknown / stale",
+          "after": "NimbusOps",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "deal.stage",
+          "before": "Discovery",
+          "after": "Proposal requested",
+          "impact": "Updates forecast and task priority",
+          "uncertain": false
+        },
+        {
+          "field": "pain_points",
+          "before": "Unknown / stale",
+          "after": "Fragmented customer context",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "objections",
+          "before": "Unknown / stale",
+          "after": "Concern: security review cannot slip",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "next_step",
+          "before": "Send generic deck",
+          "after": "send SOC2 packet and pilot checklist by May 28",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "stakeholders",
+          "before": "Unknown / stale",
+          "after": "Jordan Lee, Repair Agent, Priya Shah",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "product_interest",
+          "before": "Unknown / stale",
+          "after": "CRM Repair Agent for renewal handoff leakage",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "budget",
+          "before": "Unknown / stale",
+          "after": "Budget is approved if onboarding takes less than 21 days",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        },
+        {
+          "field": "urgency",
+          "before": "Unknown / stale",
+          "after": "by May 28",
+          "impact": "Refreshes CRM truth ledger",
+          "uncertain": false
+        }
+      ]
+    },
+    {
+      "id": "rec_helio_repair",
+      "accountId": "acct_heliostack",
+      "title": "HelioStack fragmented call + CRM row",
+      "status": "needs_repair",
+      "inputText": "CRM export says: Account HelioStack, primary contact Maya Chen, VP Marketing, stage Discovery, next step \"send generic deck\".\n\nCall transcript May 18:\nAlex: Maya, just to confirm, you're now Chief Revenue Officer?\nMaya: Yes, I moved into CRO last quarter. Priya Nair owns RevOps and Daniel Cho is our security reviewer.\nMaya: The real pain is handoff leakage between sales and success. We lose renewal context in Slack.\nAlex: Is this still exploratory?\nMaya: No, we need a pilot proposal before Friday. Budget is available if implementation is under 30 days.\nMaya: Please send the security packet and a pilot plan by May 22. If we don't have it by then we will pause until Q3.\nLater Slack note: HelioStack raised Series B in March and has 180 employees, not 80.",
+      "inputType": "transcript",
+      "createdAt": "2026-05-19T14:03:47.195Z",
+      "updatedAt": "2026-05-20T14:11:46.176Z",
+      "evidence": [
+        {
+          "id": "ev_crm_1",
+          "sourceType": "crm",
+          "sourceName": "CRM export row",
+          "snippet": "primary contact Maya Chen, VP Marketing, stage Discovery, next step send generic deck",
+          "observedAt": "2026-03-26T14:03:47.195Z",
+          "freshnessDays": 55
+        },
+        {
+          "id": "ev_call_1",
+          "sourceType": "transcript",
+          "sourceName": "May 18 call",
+          "snippet": "you're now Chief Revenue Officer? Yes, I moved into CRO last quarter.",
+          "observedAt": "2026-05-18T14:03:47.195Z",
+          "freshnessDays": 2
+        },
+        {
+          "id": "ev_call_2",
+          "sourceType": "transcript",
+          "sourceName": "May 18 call",
+          "snippet": "No, we need a pilot proposal before Friday. Budget is available if implementation is under 30 days.",
+          "observedAt": "2026-05-18T14:03:47.195Z",
+          "freshnessDays": 2
+        },
+        {
+          "id": "ev_call_3",
+          "sourceType": "transcript",
+          "sourceName": "May 18 call",
+          "snippet": "Please send the security packet and a pilot plan by May 22.",
+          "observedAt": "2026-05-18T14:03:47.195Z",
+          "freshnessDays": 2
+        },
+        {
+          "id": "ev_slack_1",
+          "sourceType": "slack",
+          "sourceName": "Slack note",
+          "snippet": "HelioStack raised Series B in March and has 180 employees, not 80.",
+          "observedAt": "2026-05-15T14:03:47.195Z",
+          "freshnessDays": 5
+        }
+      ],
+      "extracted": [
+        {
+          "field": "contact.title",
+          "value": "Chief Revenue Officer",
+          "evidenceId": "ev_call_1",
+          "confidence": 93,
+          "freshnessDays": 2
+        },
+        {
+          "field": "deal.stage",
+          "value": "Proposal requested",
+          "evidenceId": "ev_call_2",
+          "confidence": 88,
+          "freshnessDays": 2
+        },
+        {
+          "field": "next_step",
+          "value": "Send security packet and pilot plan by May 22",
+          "evidenceId": "ev_call_3",
+          "confidence": 91,
+          "freshnessDays": 2
+        },
+        {
+          "field": "company.size",
+          "value": "180 employees",
+          "evidenceId": "ev_slack_1",
+          "confidence": 82,
+          "freshnessDays": 5
+        }
+      ],
+      "proposals": [
+        {
+          "id": "prop_title",
+          "field": "contact.title",
+          "currentValue": "VP Marketing",
+          "proposedValue": "Chief Revenue Officer",
+          "confidence": 93,
+          "action": "update",
+          "rationale": "The newest direct call evidence states Maya moved into CRO last quarter. The CRM value is older and conflicts.",
+          "evidenceIds": [
+            "ev_crm_1",
+            "ev_call_1"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-18T14:03:47.195Z",
+          "repairHistory": [
+            "CRM had VP Marketing from older export",
+            "Call confirmed CRO"
+          ]
+        },
+        {
+          "id": "prop_stage",
+          "field": "deal.stage",
+          "currentValue": "Discovery",
+          "proposedValue": "Proposal requested",
+          "confidence": 88,
+          "action": "update",
+          "rationale": "Buyer explicitly said this is no longer exploratory and asked for a pilot proposal before Friday.",
+          "evidenceIds": [
+            "ev_crm_1",
+            "ev_call_2"
+          ],
+          "contradictionStatus": "conflicted",
+          "lastVerifiedAt": "2026-05-18T14:03:47.195Z",
+          "repairHistory": [
+            "Discovery stage contradicted by pilot request"
+          ]
+        },
+        {
+          "id": "prop_next",
+          "field": "next_step",
+          "currentValue": "Send generic deck",
+          "proposedValue": "Send security packet and pilot plan by May 22",
+          "confidence": 91,
+          "action": "update",
+          "rationale": "The buyer requested two concrete assets by a specific date. Generic deck is stale and underspecified.",
+          "evidenceIds": [
+            "ev_crm_1",
+            "ev_call_3"
+          ],
+          "contradictionStatus": "stale",
+          "lastVerifiedAt": "2026-05-18T14:03:47.195Z",
+          "repairHistory": [
+            "Generic deck replaced with precise commitment"
+          ]
+        }
+      ],
+      "contradictions": [
+        {
+          "id": "con_title",
+          "field": "contact.title",
+          "severity": "high",
+          "summary": "Maya's title differs across CRM and call evidence.",
+          "values": [
+            {
+              "value": "VP Marketing",
+              "evidenceId": "ev_crm_1",
+              "sourceName": "CRM export row"
+            },
+            {
+              "value": "Chief Revenue Officer",
+              "evidenceId": "ev_call_1",
+              "sourceName": "May 18 call"
+            }
+          ],
+          "recommendedResolution": "Use Chief Revenue Officer and mark old CRM title as superseded."
+        },
+        {
+          "id": "con_stage",
+          "field": "deal.stage",
+          "severity": "high",
+          "summary": "CRM says Discovery, but call evidence shows proposal requested with a deadline.",
+          "values": [
+            {
+              "value": "Discovery",
+              "evidenceId": "ev_crm_1",
+              "sourceName": "CRM export row"
+            },
+            {
+              "value": "Proposal requested",
+              "evidenceId": "ev_call_2",
+              "sourceName": "May 18 call"
+            }
+          ],
+          "recommendedResolution": "Move deal to Proposal requested and generate follow-up tasks."
+        }
+      ],
+      "minimumQuestions": [
+        {
+          "question": "Who owns implementation on HelioStack's side if the pilot is approved?",
+          "impact": "Resolves task owner and handoff routing before the 30-day implementation gate.",
+          "resolves": [
+            "implementation_owner",
+            "pilot_plan_owner"
+          ]
+        },
+        {
+          "question": "Should Daniel Cho receive the security packet directly or through Maya?",
+          "impact": "Reduces security review delay without asking broad stakeholder questions.",
+          "resolves": [
+            "security_path"
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task_packet",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_helio_repair",
+          "title": "Send security packet and pilot plan",
+          "priority": "high",
+          "dueAt": "2026-05-22T14:03:47.195Z",
+          "status": "open",
+          "reason": "Buyer deadline May 22 controls deal momentum."
+        },
+        {
+          "id": "task_owner",
+          "accountId": "acct_heliostack",
+          "recordId": "rec_helio_repair",
+          "title": "Ask Maya who owns implementation",
+          "priority": "medium",
+          "dueAt": "2026-05-23T14:03:47.195Z",
+          "status": "open",
+          "reason": "Implementation under 30 days is a budget gate."
+        }
+      ],
+      "draftEmail": {
+        "id": "email_helio",
+        "accountId": "acct_heliostack",
+        "recordId": "rec_helio_repair",
+        "subject": "Pilot plan and security packet for HelioStack",
+        "body": "Hi Maya,\n\nThanks for clarifying the pilot path. Iâ€™m sending the security packet and a focused pilot plan aligned to a sub-30-day implementation window.\n\nTo keep this moving before May 22, could you confirm whether Priya owns implementation planning and whether Daniel should receive the packet directly?\n\nBest,\nAyesha",
+        "rationale": "Uses the specific commitment, acknowledges the budget gate, and asks only the two uncertainty-reducing questions."
+      },
+      "syncPreview": [
+        {
+          "field": "contact.title",
+          "before": "VP Marketing",
+          "after": "Chief Revenue Officer",
+          "impact": "Updates outreach context and stakeholder map",
+          "uncertain": false
+        },
+        {
+          "field": "deal.stage",
+          "before": "Discovery",
+          "after": "Proposal requested",
+          "impact": "Creates proposal tasks and changes forecast category",
+          "uncertain": false
+        },
+        {
+          "field": "next_step",
+          "before": "Send generic deck",
+          "after": "Send security packet and pilot plan by May 22",
+          "impact": "Replaces generic follow-up with dated commitment",
+          "uncertain": false
+        },
+        {
+          "field": "company.size",
+          "before": "80 employees",
+          "after": "180 employees",
+          "impact": "Adjusts segmentation and prioritization",
+          "uncertain": true
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_w86vbrxsui26",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_jfuhceerui25",
+      "title": "send SOC2 packet and pilot checklist by May 28",
+      "priority": "high",
+      "dueAt": "2026-05-22T15:55:54.990Z",
+      "status": "open",
+      "reason": "Urgency signal: by May 28",
+      "kind": "follow_up"
+    },
+    {
+      "id": "task_lm45zik0ui26",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_jfuhceerui25",
+      "title": "Route security packet to reviewer",
+      "priority": "high",
+      "dueAt": "2026-05-21T15:55:54.990Z",
+      "status": "open",
+      "reason": "Security review is on the critical path.",
+      "kind": "email"
+    },
+    {
+      "id": "task_yp5q8m4bui26",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_jfuhceerui25",
+      "title": "Internal handoff: RevOps + finance alignment",
+      "priority": "medium",
+      "dueAt": "2026-05-23T15:55:54.990Z",
+      "status": "open",
+      "reason": "Cross-functional stakeholders mentioned in source evidence.",
+      "kind": "handoff"
+    },
+    {
+      "id": "task_jkysuj9xui26",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_jfuhceerui25",
+      "title": "Deal rescue: confirm deadline before pipeline pause",
+      "priority": "high",
+      "dueAt": "2026-05-21T15:55:54.990Z",
+      "status": "open",
+      "reason": "Buyer stated deal pauses if commitment is missed.",
+      "kind": "deal_rescue"
+    },
+    {
+      "id": "task_43liiqv2ycq2",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_ovhqpq3pycq2",
+      "title": "send SOC2 packet and pilot checklist by May 28",
+      "priority": "high",
+      "dueAt": "2026-05-22T15:02:55.466Z",
+      "status": "open",
+      "reason": "Urgency signal: by May 28",
+      "kind": "follow_up"
+    },
+    {
+      "id": "task_jp2kp2jtycq2",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_ovhqpq3pycq2",
+      "title": "Route security packet to reviewer",
+      "priority": "high",
+      "dueAt": "2026-05-21T15:02:55.466Z",
+      "status": "open",
+      "reason": "Security review is on the critical path.",
+      "kind": "email"
+    },
+    {
+      "id": "task_yhswnnp9ycq2",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_ovhqpq3pycq2",
+      "title": "Internal handoff: RevOps + finance alignment",
+      "priority": "medium",
+      "dueAt": "2026-05-23T15:02:55.466Z",
+      "status": "open",
+      "reason": "Cross-functional stakeholders mentioned in source evidence.",
+      "kind": "handoff"
+    },
+    {
+      "id": "task_3zmmfacpycq2",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_ovhqpq3pycq2",
+      "title": "Deal rescue: confirm deadline before pipeline pause",
+      "priority": "high",
+      "dueAt": "2026-05-21T15:02:55.466Z",
+      "status": "open",
+      "reason": "Buyer stated deal pauses if commitment is missed.",
+      "kind": "deal_rescue"
+    },
+    {
+      "id": "task_packet",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_helio_repair",
+      "title": "Send security packet and pilot plan",
+      "priority": "high",
+      "dueAt": "2026-05-22T14:03:47.195Z",
+      "status": "open",
+      "reason": "Buyer deadline May 22 controls deal momentum."
+    },
+    {
+      "id": "task_owner",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_helio_repair",
+      "title": "Ask Maya who owns implementation",
+      "priority": "medium",
+      "dueAt": "2026-05-23T14:03:47.195Z",
+      "status": "open",
+      "reason": "Implementation under 30 days is a budget gate."
+    }
+  ],
+  "draftEmails": [
+    {
+      "id": "email_w4utd0y4ui28",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_jfuhceerui25",
+      "subject": "Next steps for NimbusOps",
+      "body": "Hi Jordan,\n\nThanks for the context. I captured the key next step as: send SOC2 packet and pilot checklist by May 28.\n\nQuick confirm: Which stakeholder has final authority for the next committed step?\n\nBest,\nAyesha",
+      "rationale": "Draft is grounded in the repaired next step and asks only the highest-impact clarification."
+    },
+    {
+      "id": "email_1yrcrypkycq5",
+      "accountId": "acct_heliostack",
+      "recordId": "rec_ovhqpq3pycq2",
+      "subject": "Next steps for NimbusOps",
+      "body": "Hi Jordan,\n\nThanks for the context. I captured the key next step as: send SOC2 packet and pilot checklist by May 28.\n\nQuick confirm: Which stakeholder has final authority for the next committed step?\n\nBest,\nAyesha",
+      "rationale": "Draft is grounded in the repaired next step and asks only the highest-impact clarification."
+    }
+  ],
+  "audit": [
+    {
+      "id": "aud_0qbspzp4ui2q",
+      "kind": "extraction.performed",
+      "actor": "Repair engine",
+      "recordId": "rec_jfuhceerui25",
+      "accountId": "acct_heliostack",
+      "detail": "Generated 11 proposals, 3 contradictions, 1 commitments, and 4 tasks.",
+      "createdAt": "2026-05-20T15:55:55.010Z"
+    },
+    {
+      "id": "aud_g2y4zf7jui2q",
+      "kind": "input.received",
+      "actor": "Ayesha",
+      "recordId": "rec_jfuhceerui25",
+      "accountId": "acct_heliostack",
+      "detail": "Ingested transcript input and created repair record NimbusOps.",
+      "createdAt": "2026-05-20T15:55:55.010Z"
+    },
+    {
+      "id": "aud_reuwyywwycqf",
+      "kind": "extraction.performed",
+      "actor": "Repair engine",
+      "recordId": "rec_ovhqpq3pycq2",
+      "accountId": "acct_heliostack",
+      "detail": "Generated 11 proposals, 3 contradictions, 1 commitments, and 4 tasks.",
+      "createdAt": "2026-05-20T15:02:55.479Z"
+    },
+    {
+      "id": "aud_9xqflnjuycqf",
+      "kind": "input.received",
+      "actor": "Ayesha",
+      "recordId": "rec_ovhqpq3pycq2",
+      "accountId": "acct_heliostack",
+      "detail": "Ingested transcript input and created repair record NimbusOps.",
+      "createdAt": "2026-05-20T15:02:55.479Z"
+    },
+    {
+      "id": "aud_4vcaalz94kg0",
+      "kind": "sync.completed",
+      "actor": "Mock CRM sync",
+      "recordId": "rec_helio_repair",
+      "accountId": "acct_heliostack",
+      "detail": "Simulated CRM write-back completed. All writes are local and auditable.",
+      "createdAt": "2026-05-20T14:11:46.176Z"
+    },
+    {
+      "id": "aud_1",
+      "kind": "input.received",
+      "actor": "System",
+      "recordId": "rec_helio_repair",
+      "accountId": "acct_heliostack",
+      "detail": "Loaded HelioStack CRM export, call transcript, and Slack note.",
+      "createdAt": "2026-05-19T14:03:47.195Z"
+    },
+    {
+      "id": "aud_2",
+      "kind": "extraction.performed",
+      "actor": "Repair engine",
+      "recordId": "rec_helio_repair",
+      "accountId": "acct_heliostack",
+      "detail": "Extracted 4 high-impact field observations and 2 contradictions.",
+      "createdAt": "2026-05-20T14:03:47.195Z"
+    }
+  ],
+  "syncHistory": [
+    {
+      "id": "sync_0v9bmp7n4kg0",
+      "recordId": "rec_helio_repair",
+      "crm": "Mock CRM",
+      "summary": "Wrote 3 approved repairs and 2 tasks.",
+      "createdAt": "2026-05-20T14:11:46.176Z"
+    },
+    {
+      "id": "sync_prev",
+      "recordId": "rec_helio_repair",
+      "crm": "Mock CRM",
+      "summary": "Demo workspace seeded. No production write-back has occurred yet.",
+      "createdAt": "2026-05-19T14:03:47.195Z"
+    }
+  ]
+}
