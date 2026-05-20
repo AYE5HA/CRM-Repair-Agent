@@ -1,0 +1,10 @@
+CRM export says: Account HelioStack, primary contact Maya Chen, VP Marketing, stage Discovery, next step "send generic deck".
+
+Call transcript May 18:
+Alex: Maya, just to confirm, you're now Chief Revenue Officer?
+Maya: Yes, I moved into CRO last quarter. Priya Nair owns RevOps and Daniel Cho is our security reviewer.
+Maya: The real pain is handoff leakage between sales and success. We lose renewal context in Slack.
+Alex: Is this still exploratory?
+Maya: No, we need a pilot proposal before Friday. Budget is available if implementation is under 30 days.
+Maya: Please send the security packet and a pilot plan by May 22. If we don't have it by then we will pause until Q3.
+Later Slack note: HelioStack raised Series B in March and has 180 employees, not 80.
