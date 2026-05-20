@@ -1,0 +1,4 @@
+Account NimbusOps. CRM says contact Jordan Lee, Director IT, stage Discovery.
+Call note: Jordan is now VP Operations. They are evaluating CRM Repair Agent for renewal handoff leakage.
+Concern: security review cannot slip. Please send SOC2 packet and pilot checklist by May 28.
+Budget is approved if onboarding takes less than 21 days. Priya Shah from finance must be included.
