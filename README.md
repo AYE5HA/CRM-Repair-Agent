@@ -1,3 +1,5 @@
+[![CI](https://github.com/AYE5HA/CRM-Repair-Agent/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AYE5HA/CRM-Repair-Agent/actions)
+
 # CRM Repair Agent
 
 CRM Repair Agent is a full-stack Next.js product that reconstructs the most likely truth from messy sales inputs, detects contradictions, proposes evidence-backed CRM repairs, and simulates approved write-back into a local CRM sync layer.
