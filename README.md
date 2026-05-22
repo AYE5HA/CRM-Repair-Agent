@@ -39,21 +39,7 @@ It is intentionally **not** a generic chatbot. The core experience is a **truth 
 - Mock auth and mocked CRM write-back
 - Deterministic repair engine (`src/lib/analyzer.ts`) with OpenAI seam (`src/lib/provider.ts`)
 
-## Run Locally
 
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000/login](http://localhost:3000/login).
-
-Reset seeded data anytime:
-
-```bash
-npm run seed
-# or use "Reset demo data" in Settings / CRM Sync
-```
 
 ## Demo Walkthrough (under 2 minutes)
 
